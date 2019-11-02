@@ -25,7 +25,7 @@ func init() {
 }
 
 func main() {
-	file, err := os.Open(fmt.Sprintf("./dataset/%s.txt", lang))
+	file, err := getLangFile(lang)
 	if err != nil {
 		panic(err)
 	}

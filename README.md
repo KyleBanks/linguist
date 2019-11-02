@@ -57,6 +57,7 @@ There's a lot of work to make this a useful tool, and contributions are greatly 
 
 - [ ] Difficulty scaling
 - [ ] Randomization
+- [ ] Non-binary results (when answer is close enough but not perfect, display the correct response)
 - [ ] Mode variations (Translate from Native, Translate to Native)
 - [ ] Additional language datasets (currently only supports learning German for native English speakers)
 - [ ] Improvements to the game UI (colors, etc.)

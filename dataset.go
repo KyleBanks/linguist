@@ -2,7 +2,10 @@ package main
 
 import (
 	"bufio"
+	"fmt"
+	"go/build"
 	"io"
+	"os"
 	"strings"
 )
 
@@ -32,4 +35,14 @@ func NewDataset(r io.Reader) (*Dataset, error) {
 	}
 
 	return &d, scanner.Err()
+}
+
+func getLangFile(lang string) (*os.File, error) {
+	// TODO better means of locating dataset files
+	gopath := os.Getenv("GOPATH")
+	if gopath == "" {
+		gopath = build.Default.GOPATH
+	}
+
+	return os.Open(fmt.Sprintf("%s/src/github.com/KyleBanks/linguist/dataset/%s.txt", gopath, lang))
 }
