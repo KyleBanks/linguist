@@ -39,8 +39,8 @@ func main() {
 	var count int
 	buf := bufio.NewReader(os.Stdin)
 	for _, native := range d.Native {
-		fmt.Println(native)
-		fmt.Print("(Translate) > ")
+		fmt.Printf("Translate: %s\n", native)
+		fmt.Print("> ")
 
 		input, err := buf.ReadBytes('\n')
 		if err != nil {
